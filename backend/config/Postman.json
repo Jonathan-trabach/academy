@@ -1,0 +1,171 @@
+{   
+    "info": {
+        "name": "Academy On",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+                    "mode": "raw",
+					"raw": "{\n\t\"strategy\": \"local\",\n\t\"email\":\"teste@email.com\",\n\t\"name\":\"teste\",\n\t\"surname\":\"teste\",\n\t\"password\": \"123\",\n\t\"academy\": \"1\",\n\t\"isAthlete\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+                        }
+                    }
+				},
+				"url": {
+					"raw": "localhost:3030/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"strategy\": \"local\",\n\t\"email\":\"teste@email.com\",\n\t\"password\": \"123\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:3030/authentication",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3030",
+                    "path": [
+                        "authentication"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Academy",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+					"raw": "{\n\t\"name\": \"goFit\",\n\t\"cnpj\":\"12312312312\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+                        }
+                    }},
+                "url": {
+                    "raw": "http://localhost:3030/academy",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3030",
+                    "path": [
+                        "academy"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Type Exercise",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+					"raw": "{\n\t\"name\": \"Perna\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+                        }
+                    }},
+                "url": {
+                    "raw": "http://localhost:3030/type-exercise",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3030",
+                    "path": [
+                        "type-exercise"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Exercise",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+					"raw": "{\n\t\"name\": \"Supino ...\",\n\t\"description\":\"Supino de tal forma...\",\n\t\"idType\":\"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+                        }
+                    }},
+                "url": {
+                    "raw": "http://localhost:3030/exercise",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3030",
+                    "path": [
+                        "exercise"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Sheet Exercise",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+					"raw": "{\n\t\"idExercise\": \"1\",\n\t\"idUser\":\"1\",\n\t\"typeSheet\":\"A\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+                        }
+                    }},
+                "url": {
+                    "raw": "http://localhost:3030/sheet-exercises",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3030",
+                    "path": [
+                        "sheet-exercises"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
